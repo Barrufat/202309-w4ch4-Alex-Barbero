@@ -1,0 +1,196 @@
+:root {
+  --primary-color: #ed6436;
+  --secondary-color: #fff;
+  --terciary-color: #000;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+}
+
+.main {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__principal-heading {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--primary-color);
+}
+
+.main__secondary-heading {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  color: var(--terciary-color);
+}
+
+.button {
+  margin: 20px 0;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 0 15px 15px 15px;
+  font-size: 0.6rem;
+}
+
+.pets {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pets__box {
+  position: relative;
+}
+
+.pets__first:hover::before {
+  content: "Activities";
+  text-transform: uppercase;
+  position: absolute;
+  color: var(--secondary-color);
+  font-size: 0.6rem;
+  z-index: 3;
+  top: 75%;
+  left: 40%;
+}
+
+.pets__second:hover::before {
+  content: "Activities";
+  text-transform: uppercase;
+  position: absolute;
+  color: var(--secondary-color);
+  font-size: 0.6rem;
+  z-index: 3;
+  top: 75%;
+  left: 40%;
+}
+
+.pets__third:hover::before {
+  content: "Activities";
+  text-transform: uppercase;
+  position: absolute;
+  color: var(--secondary-color);
+  font-size: 0.6rem;
+  z-index: 3;
+  top: 75%;
+  left: 40%;
+}
+
+.pets__item {
+  position: relative;
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.pets__item--first {
+  background-image: url(../images/01.webp);
+}
+
+.pets__item--second {
+  background-image: url(../images/02.webp);
+}
+
+.pets__item--third {
+  background-image: url(../images/03.webp);
+}
+
+.pets__item--first:hover::before {
+  content: "Toys Playtime";
+  position: absolute;
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 2;
+  border-radius: 20px;
+  background-color: #0000007a;
+  height: 100%;
+  width: 100%;
+  padding-top: 56%;
+  padding-left: 35%;
+}
+
+.pets__item--second:hover::before {
+  content: "Active Rest";
+  position: absolute;
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 2;
+  border-radius: 20px;
+  background-color: #0000007a;
+  height: 100%;
+  width: 100%;
+  padding-top: 56%;
+  padding-left: 37%;
+}
+
+.pets__item--third:hover::before {
+  content: "Game Walks";
+  position: absolute;
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 2;
+  border-radius: 20px;
+  background-color: #0000007a;
+  height: 100%;
+  width: 100%;
+  padding-top: 56%;
+  padding-left: 35%;
+}
+
+@media (min-width: 600px) {
+  .pets {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-items: center;
+  }
+
+  .pets__item {
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    background-size: contain;
+  }
+}
