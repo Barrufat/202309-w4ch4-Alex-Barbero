@@ -44,6 +44,18 @@ button {
   align-items: center;
 }
 
+.main__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__heading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main__principal-heading {
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -65,6 +77,14 @@ button {
   padding: 10px;
   border-radius: 0 15px 15px 15px;
   font-size: 0.6rem;
+  border: solid 1px var(--primary-color);
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+  border: solid 1px var(--primary-color);
+  color: var(--primary-color);
+  cursor: pointer;
 }
 
 .pets {
@@ -178,19 +198,39 @@ button {
 }
 
 @media (min-width: 600px) {
+  .main__box {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main__heading-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .pets {
     display: flex;
-    gap: 20px;
     flex-direction: row;
     justify-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pets__box {
+    position: relative;
+    width: 30%;
   }
 
   .pets__item {
     cursor: pointer;
     position: relative;
     border-radius: 20px;
-    width: 300px;
-    height: 200px;
-    background-size: contain;
+    width: 100%;
+    height: 40vw;
+    background-position: center;
+    background-size: cover;
   }
 }
