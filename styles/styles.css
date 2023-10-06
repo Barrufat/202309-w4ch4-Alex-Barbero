@@ -288,4 +288,16 @@ a:hover {
     background-position: center;
     background-size: cover;
   }
+
+  .pets__item--first {
+    background-image: url(../images/01desktop.jpg);
+  }
+
+  .pets__item--second {
+    background-image: url(../images/02desktop.jpg);
+  }
+
+  .pets__item--third {
+    background-image: url(../images/03desktop.jpg);
+  }
 }
